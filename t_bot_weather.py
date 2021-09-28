@@ -14,8 +14,8 @@ def send_echo(message):
 			observation = mgr.weather_at_place(message.text)
 			w = observation.weather
 			temp = w.temperature("celsius")["temp"]
-			res = 'В городе ' + message.text + ' сейчас "' + w.detailed_status + '"'
-			res += "\nТемпература сейчас всреднем "+str(temp) + "C градусов по Цельсию\n\n"
+			res = 'В городе ' + message.text + '"' + w.detailed_status + '"'
+			res += "\nТемпература сейчас "+str(temp) + " °C градусов по Цельсию\n\n"
 			if temp<-10:
 				res += "Мороз Лютый! Шапку не забудь"
 			elif temp<10:
